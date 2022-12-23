@@ -1,0 +1,28 @@
+{
+  "name": "@ace-ex/ace-template",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Crie um novo aplicativo Next.js pré-configurado com o AceEx UI.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "directory": "packages/ace-template",
+    "url": "git+https://github.com/ShadowsS01/ace-ex-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShadowsS01/ace-ex-ui/issues"
+  },
+  "homepage": "https://github.com/ShadowsS01/ace-ex-ui/tree/main/packages/ace-template/README.md",
+  "scripts": {
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint --fix . && prettier --write .",
+    "clean": "rm -rf node_modules && rm -rf .turbo"
+  },
+  "devDependencies": {
+    "@ace-ex/eslint-config": "*",
+    "@ace-ex/ts-config": "*",
+    "eslint": "^8.30.0",
+    "prettier": "^2.8.1",
+    "typescript": "4.7"
+  }
+}
