@@ -1,0 +1,147 @@
+import { Meta } from "@storybook/addon-docs";
+import { Image, Text, Box, Heading } from "@ace-ex/react";
+
+<Meta title="Introduction/Getting Started" />
+
+# Getting Started
+
+<Text size="lg" css={{ color: "$gray100", mt: "$4", mb: "$8" }}>
+  As instruções abaixo abordam como usar o AceEx UI com um aplicativo React.
+</Text>
+
+## Criando um novo app com AceEx UI
+
+Começando do zero? A melhor maneira de inicializar um novo projeto com AceEx UI é usar nosso [modelo Next.js](https://github.com/ShadowsS01/ace-ex-ui/tree/main/packages/ace-template).
+
+Ele gerará um novo app [Next.js](https://nextjs.org/) com AceEx UI e você começará em minutos!
+
+## Adicionando AceEx UI a um aplicativo existente
+
+Já tem um projeto com [React](https://reactjs.org/)? Você pode instalar o AceEx UI via `yarn` ou `npm`. No diretório do projeto atual, execute o seguinte comando:
+
+```bash
+# Com yarn:
+yarn add @ace-ex/react
+
+# Com npm:
+npm install @ace-ex/react
+```
+
+## Server-Side Rendering
+
+Como configurar a renderização do lado do servidor.
+
+Você pode obter acesso à string CSS usando a função getCssText. Esta função é disponibilizada pelo `@ace-ex/react`.
+
+```jsx
+import { getCssText } from "@ace-ex/react";
+```
+
+O `getCssText` fornecerá todo o CSS necessário para renderizá-lo no lado do servidor.
+
+Para uma melhor estratégia de hidratação, recomendamos adicionar um `id="stitches"` à sua tag `style`.
+
+Aqui está um exemplo de SSR com Next.js
+
+```jsx
+import React from "react";
+import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import { getCssText } from "@ace-ex/react";
+
+export default class Document extends NextDocument {
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+```
+
+> Para mais detalhes veja na documentação do [Stiches](https://stitches.dev/docs/server-side-rendering).
+
+### Fonts
+
+No [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react) é utilizado duas fontes que vem do pacote [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens): `Inter` e `Open Sans`.
+
+Dentro de `@ace-ex/react` já contem uma função que importa essas fontes. Exemplo com Next:
+
+```tsx
+// _app.tsx
+import type { AppProps } from "next/app";
+import { fontsImport } from "@ace-ex/react";
+
+export default function App({ Component, pageProps }: AppProps) {
+  fontsImport(); // Chamando essa função para aplicar as fontes
+
+  return <Component {...pageProps} />;
+}
+```
+
+Mas caso queira utilizar a tag `link` na `head` para ser mais rápido, pode utilizar as [fontes do Google](https://fonts.google.com/):
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+```
+
+Para ver as fontes presentes nos token, vá para a página de [fonts](/docs/features-theme-fonts--page) na seção Features/Theme.
+
+### Tema
+
+Os tokens padrões do AceEx UI fazem parte do pacote [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens). Consulte a [documentação do tema](/docs/features-theme-tema--page) para saber mais sobre o tema.
+
+Por padrão o tema já vem tudo configurado, também contento a função `styled()` de estilização `css-in-js` do [Stitches](https://stitches.dev/).
+
+Exemplo de uso:
+
+```tsx
+// MyComponents.tsx
+import { styled } from "@ace-ex/react";
+
+export const MyComponent = styled("button", {
+  bc: "#fff", // `bc` é uma util para backgroundColor
+  color: "#000",
+});
+
+export const MyOtherComponent = styled("div", {
+  bc: "$gray800", // a função pode acessar o tema atráves do `$`
+  color: "$primary",
+});
+```
+
+Ou pode utilizar a proprieda `css` nos componentes:
+
+```tsx
+// HomePage.tsx
+import { Box, Heading } from "@ace-ex/react";
+
+export default function HomePage() {
+  return (
+    <Box css={{ display: "flex", justifyContent: "center" }}>
+      <Heading css={{ color: "$blue600" }} size="xl">
+        Hello World
+      </Heading>
+    </Box>
+  );
+}
+```
+
+Caso queira entender mais sobre a utilização dos tokens, acessa a documentação [Theme Tokens](https://stitches.dev/docs/tokens#using-tokens) do Stiches.

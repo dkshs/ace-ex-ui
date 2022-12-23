@@ -1,0 +1,474 @@
+import { Meta } from "@storybook/addon-docs";
+import { Image, Text, Box, Heading, Link } from "@ace-ex/react";
+import {
+  Swatch,
+  Preview,
+  Spacing,
+  BorderRadius,
+  Typography,
+} from "../../components";
+
+<Meta title="Features/Theme/Tema" />
+
+# Tema
+
+<Text size="lg" css={{ color: "$gray100", mt: "$4", mb: "$8" }}>
+  O tema usado em toda a AceEx UI vem da biblioteca de tokens,{" "}
+  <Link
+    size="lg"
+    variant="blueShadow"
+    href="https://www.npmjs.com/package/@ace-ex/tokens"
+    target="_blank"
+  >
+    @ace-ex/tokens
+  </Link>
+  . Mas não é necessário baixar os tokens caso não queira fazer um tema, por causa
+  que o <Link
+    size="lg"
+    variant="blueShadow"
+    href="https://www.npmjs.com/package/@ace-ex/react/react"
+    target="_blank"
+  >
+    @ace-ex/react
+  </Link> já tem eles.
+</Text>
+
+## Conteúdo
+
+- **[Cores](#cores)**
+- **[Spaces](#space)**
+- **[Border radius](#border-radius)**
+- **[Typography](#typography)**
+  - **[Typography preview](#typography-preview)**
+    - **[Default font](#open-sans-default-font)**
+    - **[Inter font](#inter-inter-font)**
+  - **[Font sizes](#font-sizes)**
+  - **[Font weights](#font-weights)**
+- **[Breakpoints e Media queries](#breakpoints-e-media-queries)**
+
+## Cores
+
+Utilização caso tenha baixado o [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens):
+
+```jsx
+import { colors } from "@ace-ex/tokens"
+
+colors.<COLOR_NAME>
+```
+
+Utilização caso tenha baixado o [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react/react):
+
+**As cores como qualquer outro token pode ser acessado atráves do `$<token>`.**
+**Também pode acessar atráves dos `$<token-type>$<token>`.**
+
+Com a função `styled()`:
+
+```tsx
+// MyComponents.tsx
+import { styled } from "@ace-ex/react";
+
+export const MyComponent = styled("button", {
+  backgroundColor: "$white", // As cores como qualquer outro token pode ser acessado atráves do `$`
+  color: "$black",
+});
+```
+
+Com `css` inline:
+
+```tsx
+// HomePage.tsx
+import { Box, Heading } from "@ace-ex/react";
+
+export default function HomePage() {
+  return (
+    <Box css={{ display: "flex", justifyContent: "center" }}>
+      {/* Acessando atráves de `$<token>` */}
+      <Heading css={{ color: "$blue600" }} size="xl">
+        Hello World
+      </Heading>
+      {/* Acessando atráves de `$<token-type>$<token>` */}
+      <Heading
+        css={{
+          color: "$blue600",
+          boxShadow: "0px 10px 38px -10px $colors$black",
+        }}
+        size="xl"
+      >
+        Hello World
+      </Heading>
+    </Box>
+  );
+}
+```
+
+Abaixo estão as cores, para mais detalhes das cores veja na [página colors](/docs/features-theme-colors--page).
+
+### Blues
+
+<Swatch colorName="blue100" />
+<Swatch colorName="blue200" />
+<Swatch colorName="blue300" />
+<Swatch colorName="blue400" />
+<Swatch colorName="blue500" />
+<Swatch colorName="blue600" />
+<Swatch colorName="blue700" />
+<Swatch colorName="blue800" />
+<Swatch colorName="blue900" />
+
+### Zinc
+
+<Swatch colorName="zinc900" />
+<Swatch colorName="zinc800" />
+
+### Grays
+
+<Swatch colorName="gray50" />
+<Swatch colorName="gray100" />
+<Swatch colorName="gray200" />
+<Swatch colorName="gray300" />
+<Swatch colorName="gray400" />
+<Swatch colorName="gray500" />
+<Swatch colorName="gray600" />
+<Swatch colorName="gray700" />
+<Swatch colorName="gray800" />
+<Swatch colorName="gray900" />
+
+### Reds
+
+<Swatch colorName="red100" />
+<Swatch colorName="red200" />
+<Swatch colorName="red300" />
+<Swatch colorName="red400" />
+<Swatch colorName="red500" />
+<Swatch colorName="red600" />
+<Swatch colorName="red700" />
+<Swatch colorName="red800" />
+<Swatch colorName="red900" />
+
+### Greens
+
+<Swatch colorName="green100" />
+<Swatch colorName="green200" />
+<Swatch colorName="green300" />
+<Swatch colorName="green400" />
+<Swatch colorName="green500" />
+<Swatch colorName="green600" />
+<Swatch colorName="green700" />
+<Swatch colorName="green800" />
+<Swatch colorName="green900" />
+
+### Fixo
+
+<Swatch colorName="white" />
+<Swatch colorName="black" />
+
+## Space
+
+Use espaçamentos para gutters, margins e paddings. Não o use para largura da borda, border radius, tamanho da fonte ou altura da linha. Em vez disso, use as propriedades de tema dedicadas.
+
+Utilização caso tenha baixado o [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens):
+
+```jsx
+import { space } from "@ace-ex/tokens"
+
+space.<SPACE>
+```
+
+Utilização caso tenha baixado o [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react/react):
+
+**Os spaces como qualquer outro token pode ser acessado atráves do `$<token>`.**
+**Também pode acessar atráves dos `$<token-type>$<token>`.**
+
+Com a função `styled()`:
+
+```tsx
+// MyComponents.tsx
+import { styled } from "@ace-ex/react";
+
+export const MyComponent = styled("button", {
+  padding: "$2 $4", // Os spaces como qualquer outro token pode ser acessado atráves do `$`
+  margin: "$1",
+});
+```
+
+Com `css` inline:
+
+```tsx
+// HomePage.tsx
+import { Box, Heading } from "@ace-ex/react";
+
+export default function HomePage() {
+  return (
+    <Box css={{ display: "flex", justifyContent: "center" }}>
+      {/* Acessando atráves de `$<token>` */}
+      <Heading css={{ my: "$5" }} size="xl">
+        Hello World
+      </Heading>
+    </Box>
+  );
+}
+```
+
+Abaixo estão os spaces, para mais detalhes dos spaces veja na [página Space](/docs/features-theme-space--page).
+
+<Preview>
+  <Spacing spaceName="0-5" />
+  <Spacing spaceName="1" />
+  <Spacing spaceName="1-5" />
+  <Spacing spaceName="2" />
+  <Spacing spaceName="2-5" />
+  <Spacing spaceName="3" />
+  <Spacing spaceName="3-5" />
+  <Spacing spaceName="4" />
+  <Spacing spaceName="5" />
+  <Spacing spaceName="6" />
+  <Spacing spaceName="7" />
+  <Spacing spaceName="8" />
+  <Spacing spaceName="9" />
+  <Spacing spaceName="10" />
+  <Spacing spaceName="11" />
+  <Spacing spaceName="12" />
+  <Spacing spaceName="14" />
+  <Spacing spaceName="16" />
+  <Spacing spaceName="20" />
+  <Spacing spaceName="24" />
+  <Spacing spaceName="28" />
+  <Spacing spaceName="32" />
+  <Spacing spaceName="36" />
+  <Spacing spaceName="40" />
+  <Spacing spaceName="64" />
+  <Spacing spaceName="80" />
+</Preview>
+
+## Border radius
+
+Utilização caso tenha baixado o [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens):
+
+```jsx
+import { radii } from "@ace-ex/tokens"
+
+radii.<borderRadius>
+```
+
+Utilização caso tenha baixado o [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react/react):
+
+**Os borderRadius como qualquer outro token pode ser acessado atráves do `$<token>`.**
+**Também pode acessar atráves dos `$<token-type>$<token>`.**
+
+Com a função `styled()`:
+
+```tsx
+// MyComponents.tsx
+import { styled } from "@ace-ex/react";
+
+export const MyComponent = styled("button", {
+  borderRadius: "$md", // Os borderRadius como qualquer outro token pode ser acessado atráves do `$`
+});
+```
+
+Com `css` inline:
+
+```tsx
+// HomePage.tsx
+import { Box, Image } from "@ace-ex/react";
+
+export default function HomePage() {
+  return (
+    <Box css={{ display: "flex", justifyContent: "center" }}>
+      {/* Acessando atráves de `$<token>` */}
+      <Image src="my_src.png" css={{ borderRadius: "$full" }} />
+    </Box>
+  );
+}
+```
+
+Abaixo estão os borderRadius, para mais detalhes dos borderRadius veja na [página Radii](/docs/features-theme-radii--page).
+
+<Preview>
+  <BorderRadius borderRadius="none" />
+  <BorderRadius borderRadius="px" />
+  <BorderRadius borderRadius="xs" />
+  <BorderRadius borderRadius="sm" />
+  <BorderRadius borderRadius="md" />
+  <BorderRadius borderRadius="lg" />
+  <BorderRadius borderRadius="xl" />
+  <BorderRadius borderRadius="full" />
+</Preview>
+
+## Typography
+
+### Font sizes
+
+Utilização caso tenha baixado o [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens):
+
+```jsx
+import { fontSizes } from "@ace-ex/tokens"
+
+fontSizes.<fontSize>
+```
+
+Utilização caso tenha baixado o [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react/react):
+
+**Os fontSizes como qualquer outro token pode ser acessado atráves do `$<token>`.**
+**Também pode acessar atráves dos `$<token-type>$<token>`.**
+
+Com a função `styled()`:
+
+```tsx
+// MyComponents.tsx
+import { styled } from "@ace-ex/react";
+
+export const MyComponent = styled("h1", {
+  fontSizes: "$2xl", // Os fontSizes como qualquer outro token pode ser acessado atráves do `$`
+});
+```
+
+Com `css` inline:
+
+```tsx
+// HomePage.tsx
+import { Box, Heading } from "@ace-ex/react";
+
+export default function HomePage() {
+  return (
+    <Box css={{ display: "flex", justifyContent: "center" }}>
+      {/* Acessando atráves de `$<token>` */}
+      <Heading css={{ my: "$5", fontSize: "$2xl" }}>Hello World</Heading>
+    </Box>
+  );
+}
+```
+
+_Acima mostro como utilizar no componente `Heading`, que é um componente de titulo e ele já contem uma propriedade `size` para tamanho de fonte, sendo inútil a utilização do `css` inline para o font size._
+
+Vá para a seção de [Typography Preview](#typography-preview) para ver os tamanhos das fontes, para mais detalhes dos tamanhos das fontes veja na [página fontSizes](/docs/features-theme-font-sizes--page).
+
+### Font weights
+
+Utilização caso tenha baixado o [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens):
+
+```jsx
+import { fontWeights } from "@ace-ex/tokens"
+
+fontWeights.<fontWeight>
+```
+
+Utilização caso tenha baixado o [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react/react):
+
+**Os fontWeights como qualquer outro token pode ser acessado atráves do `$<token>`.**
+**Também pode acessar atráves dos `$<token-type>$<token>`.**
+
+Com a função `styled()`:
+
+```tsx
+// MyComponents.tsx
+import { styled } from "@ace-ex/react";
+
+export const MyComponent = styled("h1", {
+  fontWeight: "$semiBold", // Os fontWeights como qualquer outro token pode ser acessado atráves do `$`
+});
+```
+
+Com `css` inline:
+
+```tsx
+// HomePage.tsx
+import { Box, Heading } from "@ace-ex/react";
+
+export default function HomePage() {
+  return (
+    <Box css={{ display: "flex", justifyContent: "center" }}>
+      {/* Acessando atráves de `$<token>` */}
+      <Heading css={{ fontWeight: "$bold" }}>Hello World</Heading>
+    </Box>
+  );
+}
+```
+
+Vá para a seção de [Typography Preview](#typography-preview) para ver os pesos das fontes, para mais detalhes dos pesos das fontes veja na [página fontWeights](/docs/features-theme-font-weights--page).
+
+## Typography Preview
+
+Tamanho das fontes utilizadas em píxeis e o Peso delas.
+
+**Na seção [Features/Theme/Font Sizes](/docs/features-theme-font-sizes--page) pode ser encontrado mais detalhes
+sobre o tamanho das fontes!**
+
+**Na seção [Features/Theme//Font Weights](/docs/features-theme-font-weights--page) pode ser encontrado mais detalhes
+sobre o peso das fontes!**
+
+### Open Sans (default font)
+
+**Font**: [_Open Sans_ **_(default font)_**](/docs/features-theme-fonts--page)
+
+<Typography fontName="default" />
+
+### Inter (inter font)
+
+**Font**: [_Inter_ **_(inter font)_**](/docs/features-theme-fonts--page)
+
+<Typography fontName="inter" />
+
+## Breakpoints e media queries
+
+Utilização caso tenha baixado o [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens):
+
+```jsx
+import { media } from "@ace-ex/tokens"
+
+media.[xs|sm|md|lg|xl]
+```
+
+Utilização caso tenha baixado o [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react/react):
+
+**As Media queries são diferentes comparado aos outros tokens. Para acessar as media queries tanto na funçõa `styled()` quanto no `css` inline:**
+
+```tsx
+"@sm": {
+  // Seu `css`...
+}
+```
+
+Com a função `styled()`:
+
+```tsx
+// MyComponents.tsx
+import { styled } from "@ace-ex/react";
+
+export const MyComponent = styled("button", {
+  widht: "$10", // Quanto estiver dentro de min-width: 320px esse será o estilo aplicado
+
+  "@sm": {
+    // Quanto passar de min-width: 320px esse será o estilo aplicado
+    widht: "$12",
+  },
+});
+```
+
+Com `css` inline:
+
+```tsx
+// HomePage.tsx
+import { Box, Image } from "@ace-ex/react";
+
+export default function HomePage() {
+  return (
+    <Box css={{ display: "flex", justifyContent: "center" }}>
+      <Image
+        src="my_src.png"
+        css={{
+          borderRadius: "$full", // Quanto estiver dentro de min-width: 320px esse será o estilo aplicado
+          "@sm": {
+            // Quanto passar de min-width: 320px esse será o estilo aplicado
+            borderRadius: "$md",
+          },
+        }}
+      />
+    </Box>
+  );
+}
+```
+
+Para mais detalhes sobre as Media queries veja na [página Media Query](/docs/features-theme-media-query--page).
+
+[🔝 Voltar para o topo](#)

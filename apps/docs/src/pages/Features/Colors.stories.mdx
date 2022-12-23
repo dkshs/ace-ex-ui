@@ -1,0 +1,83 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from "@storybook/addon-docs";
+import { TabsState } from "@storybook/components";
+import { theme, darkTheme } from "@ace-ex/react";
+import { colors } from "@ace-ex/tokens";
+
+<Meta title="Features/Theme/Colors" />
+
+export const getColors = (theme) =>
+  Object.entries(theme).map(([key, color]) => {
+    return { name: key, color };
+  });
+
+export const getColorsDark = (theme) =>
+  Object.entries(theme).map(([key, color]) => {
+    return { name: key, color };
+  });
+
+export const themeColor = [
+  "loContrast",
+  "hiContrast",
+  "primary",
+  "secondary",
+  "tertiary",
+  "background",
+  "headerBackground",
+  "toastBackground",
+  "border",
+];
+
+export var lightThemeColors = [];
+const getLightThemeColors = () => {
+  getColors(theme.colors).map(({ color }) => {
+    themeColor.map((name) => {
+      if (color.token === name) {
+        lightThemeColors.push(color);
+      }
+    });
+  });
+};
+getLightThemeColors();
+
+# Colors
+
+Essas são as cores presentes no [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens). E as cores dos temas `Light` e `Dark` do [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react/react) que extendem as `cores padrões` do [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens).
+
+<TabsState initial="theme">
+  <div id="theme" title="Cores padrões">
+    <ColorPalette>
+      {getColors(colors).map(({ name, color }) => (
+        <ColorItem
+          key={name}
+          title={`$${name}`}
+          subtitle={name}
+          colors={[color]}
+        />
+      ))}
+    </ColorPalette>
+  </div>
+  <div id="light" title="Light mode">
+    <ColorPalette>
+      {lightThemeColors.map((color) => (
+        <ColorItem
+          key={color.token}
+          title={`$${color.token}`}
+          subtitle={color.token}
+          colors={[color.value]}
+        />
+      ))}
+    </ColorPalette>
+  </div>
+  <div id="dark" title="Dark mode">
+    <ColorPalette>
+      {getColorsDark(darkTheme.colors).map(({ name, color }) => (
+        <ColorItem
+          key={name}
+          title={`$${name}`}
+          subtitle={name}
+          colors={[color.value]}
+        />
+      ))}
+    </ColorPalette>
+  </div>
+</TabsState>

@@ -1,0 +1,87 @@
+import { Meta } from "@storybook/addon-docs";
+import { Image, Text, Box, Heading, Link } from "@ace-ex/react";
+
+<Meta title="Introduction/Welcome" />
+
+<Box>
+
+<Image
+  alt="AceEx UI Logo"
+  src="/logo-dark.svg"
+  css={{ width: "100%", height: "30%", m: "0 auto $10" }}
+/>
+
+<Text size="lg" css={{ color: "$gray100" }}>
+  Design System com componentes, tokens, eslint config e documentação StoryBook
+  para os componentes e tokens.
+</Text>
+
+[![Version](https://img.shields.io/npm/v/@ace-ex/react)](https://www.npmjs.com/package/@ace-ex/react)
+[![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ShadowsS01/ace-ex-ui/blob/main/packages/react/LICENSE)
+
+<Box
+  css={{
+    pt: "$6",
+    px: "$6",
+    mt: "$6",
+    float: "left",
+    width: "100%",
+    border: "2px solid $gray800",
+    br: "$md",
+    "@md": {
+      width: "calc(50% - 20px)",
+      mr: "$6",
+      minHeight: "200px",
+    },
+  }}
+>
+  <Heading css={{ mb: "$6", color: "$gray100" }}>Getting started</Heading>{" "}
+  <Text css={{ color: "$gray100" }}>
+    Configure um novo aplicativo com o AceEx UI ou adicione-o a um projeto
+    existente.
+  </Text>
+  <Box css={{ my: "$4" }}>
+    <Link
+      size="lg"
+      variant="blue"
+      css={{ px: "$0-5", pt: "$0-5" }}
+      href="/?path=/docs/introduction-getting-started--page"
+    >
+      Get started
+    </Link>
+  </Box>
+</Box>
+
+<Box
+  css={{
+    pt: "$6",
+    px: "$6",
+    mt: "$6",
+    float: "left",
+    width: "100%",
+    border: "2px solid $gray800",
+    br: "$md",
+    "@md": {
+      width: "calc(50% - 20px)",
+      minHeight: "200px",
+    },
+  }}
+>
+  <Heading css={{ mb: "$6", color: "$gray100" }}>Tokens</Heading>{" "}
+  <Text css={{ color: "$gray100" }}>
+    Visuais primitivos, como tipografia, cor e espaçamento, que são
+    compartilhados entre plataformas.
+  </Text>
+  <Box css={{ my: "$4" }}>
+    <Link
+      size="lg"
+      variant="blue"
+      css={{ px: "$0-5", pt: "$0-5" }}
+      href="/?path=/docs/features-theme-tema--page"
+    >
+      Tokens
+    </Link>
+  </Box>
+</Box>
+
+</Box>

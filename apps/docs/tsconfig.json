@@ -1,0 +1,5 @@
+{
+  "extends": "@ace-ex/ts-config/react.json",
+  "include": ["src", ".storybook"],
+  "compilerOptions": { "module": "CommonJS" }
+}

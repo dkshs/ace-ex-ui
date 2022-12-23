@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": "@ace-ex/eslint-config",
+  "ignorePatterns": [".turbo", "storybook-static", "node_modules"]
+}
