@@ -1,0 +1,25 @@
+{
+  "name": "@ace-ex/ts-config",
+  "version": "0.0.0",
+  "description": "Configurações de TypeScript.",
+  "license": "MIT",
+  "files": [
+    "base.json",
+    "node16.json",
+    "react.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "directory": "packages/ts-config",
+    "url": "git+https://github.com/ShadowsS01/ace-ex-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShadowsS01/ace-ex-ui/issues"
+  },
+  "homepage": "https://github.com/ShadowsS01/ace-ex-ui/tree/main/packages/ts-config/README.md",
+  "publishConfig": {
+    "access": "public"
+  }
+}
