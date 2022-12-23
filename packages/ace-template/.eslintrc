@@ -1,5 +1,5 @@
 {
   "root": true,
   "extends": "@ace-ex/eslint-config",
-  "ignorePatterns": [".turbo", "node_modules"]
+  "ignorePatterns": [".turbo", "node_modules", ".next"]
 }
