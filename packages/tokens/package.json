@@ -1,6 +1,6 @@
 {
   "name": "@ace-ex/tokens",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Visuais primitivos, como tipografia, cor e espaçamento, que são compartilhados entre plataformas.",
   "main": "./dist/index.js",
