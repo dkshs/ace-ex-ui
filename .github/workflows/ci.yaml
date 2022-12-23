@@ -1,0 +1,33 @@
+name: Tests and Lint
+
+on: [pull_request]
+
+jobs:
+  tests-and-lint:
+    name: Tests and Lint
+    runs-on: ubuntu-latest
+
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+      TURBO_REMOTE_ONLY: true
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Tests
+        run: npm run test:ci
+
+      - name: Lint
+        run: npm run lint
