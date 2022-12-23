@@ -27,3 +27,4 @@ Aqui estão alguns links úteis para começar a usar o AceEx UI:
 - **[@ace-ex/tokens](./packages/tokens/)** — visuais primitivos, como tipografia, cor e espaçamento
 - **[@ace-ex/eslint-config](./packages/eslint-config/)** — configurações de Eslint
 - **[@ace-ex/ts-config](./packages/ts-config/)** — configurações de TypeScript.
+- **[@ace-ex/ace-template](./packages/ace-template/)** — inicializar um novo app Next.js com AceEx UI.
