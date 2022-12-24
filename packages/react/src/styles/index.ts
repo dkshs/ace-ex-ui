@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-unused-vars
+import type * as Stitches from "@stitches/react";
+
 import { createStitches, defaultThemeMap } from "@stitches/react";
 import {
   colors,

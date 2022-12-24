@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import type * as Stitches from "@stitches/react";
 
-import type { ComponentProps } from "react";
+import type { ComponentProps, FC } from "react";
 
 import { styled } from "../../styles";
 import { Text } from "../Text";
@@ -35,7 +35,12 @@ export interface SpinnerProps extends ComponentProps<typeof StyledSpinner> {
   textFirst?: boolean;
 }
 
-export const Spinner = ({ textFirst, text, size, ...props }: SpinnerProps) => {
+export const Spinner: FC<SpinnerProps> = ({
+  textFirst,
+  text,
+  size,
+  ...props
+}) => {
   return (
     <StyledSpinner
       aria-label="O conteúdo está carregando..."
@@ -50,3 +55,5 @@ export const Spinner = ({ textFirst, text, size, ...props }: SpinnerProps) => {
     </StyledSpinner>
   );
 };
+
+Spinner.displayName = "Spinner";
