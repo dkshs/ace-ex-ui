@@ -4,7 +4,7 @@ import type * as Stitches from "@stitches/react";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
 
-import { useTransition, animated, config } from "react-spring";
+import { useTransition, animated, config } from "@react-spring/web";
 import { transparentize } from "polished";
 import { colors } from "@ace-ex/tokens";
 import { darkTheme, styled } from "../../styles";

@@ -6,7 +6,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 import { transparentize } from "polished";
 import { colors } from "@ace-ex/tokens";
-import { useTransition, animated, config } from "react-spring";
+import { useTransition, animated, config } from "@react-spring/web";
 import { darkTheme, styled } from "../../styles";
 
 import { Button } from "../Button";
