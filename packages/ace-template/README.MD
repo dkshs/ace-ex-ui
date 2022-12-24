@@ -1,6 +1,6 @@
 <div align="center">
 
-# @ace-ex/cna-template
+# @ace-ex/ace-template
 
 Um modelo de [create-next-app template](https://nextjs.org/docs/api-reference/create-next-app) para apps TypeScript Next.js com o front-end do AceEx UI.
 
@@ -42,7 +42,7 @@ Isso criará a pasta `my-app` e inicializará um novo projeto dentro dela. O pro
 
 ### Ativando as ferramentas
 
-Execute `npm run dev` para iniciar a compilação de desenvolvimento. O aplicativo deve abrir automaticamente no seu navegador. As alterações feitas em `pages/index.tsx` devem ficar visíveis na página quase imediatamente.
+Execute `npm run dev` para iniciar a compilação de desenvolvimento. O aplicativo deve abrir automaticamente no seu navegador. As alterações feitas em `src/pages/index.tsx` devem ficar visíveis na página quase imediatamente.
 
 Para criar um build de produção do seu app, execute `npm run build`. `Next.js`criará uma compilação de produção otimizada de seu aplicativo dentro da pasta `.next/` de seu projeto. Ele também fornecerá detalhes adicionais sobre o que fazer com eles.
 
@@ -53,7 +53,7 @@ Um linter é uma ferramenta que verifica seu código para
 - problemas que farão com que ele quebre quando executado, ou
 - estilo de código que viola um determinado conjunto de regras que o projeto está seguindo.
 
-Seu projeto será configurado para usar uma versão do popular do linter [ESLint](https://eslint.org) para TypeScript com [Prettier](https://prettier.io/) fornecido pela AceEx. Você pode limpar seu código e aplicar correções automáticas executando `npm run lint:fix` ou `npm run lint` caso queira só fazer uma verificação no código.
+Seu projeto será configurado para usar uma versão do popular linter [ESLint](https://eslint.org) para TypeScript com [Prettier](https://prettier.io/) fornecido pela AceEx. Você pode limpar seu código e aplicar correções automáticas executando `npm run lint:fix` ou `npm run lint` caso queira só fazer uma verificação no código.
 
 ## Recursos úteis
 
