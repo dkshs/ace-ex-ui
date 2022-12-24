@@ -1,6 +1,6 @@
 {
   "name": "@ace-ex/react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Biblioteca de componentes React.",
   "main": "./dist/index.js",

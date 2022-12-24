@@ -1,6 +1,6 @@
 {
   "name": "@ace-ex/ace-template",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Crie um novo aplicativo Next.js pré-configurado com o AceEx UI.",
   "private": true,
