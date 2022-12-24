@@ -9,6 +9,15 @@ import { Image, Text, Box, Heading } from "@ace-ex/react";
   As instruções abaixo abordam como usar o AceEx UI com um aplicativo React.
 </Text>
 
+## Conteúdo
+
+- **[Criando um novo app](#criando-um-novo-app-com-aceex-ui)**
+- **[Adicionando AceEx UI a um aplicativo existente](#adicionando-aceex-ui-a-um-aplicativo-existente)**
+- **[Server-Side Rendering](#server-side-rendering)**
+- **[Fonts](#fonts)**
+- **[Dark e Light](#dark-e-light)**
+- **[Tema](#tema)**
+
 ## Criando um novo app com AceEx UI
 
 Começando do zero? A melhor maneira de inicializar um novo projeto com AceEx UI é usar nosso [modelo Next.js](https://github.com/ShadowsS01/ace-ex-ui/tree/main/packages/ace-template).
@@ -104,6 +113,57 @@ Mas caso queira utilizar a tag `link` na `head` para ser mais rápido, pode util
 
 Para ver as fontes presentes nos token, vá para a página de [fonts](/docs/features-theme-fonts--page) na seção Features/Theme.
 
+### Dark e Light
+
+O tema é composto por dois temas, `light` e `dark`. Para alterar entre um e outro você pode colocar na tag `html` o atributo `class`, dessa forma, `class="dark-theme"`. Fazendo isso a aplicação ficará com o tema `dark`, caso tire esse atributo ele voltará para o tema `light`.
+
+Caso queira utilizar somente um tema, `dark` por exemplo, você pode colocar o atributo `class` na tag `html`. Se tiver utilizando `Next.Js`, você pode colocar no arquivo `_document.tsx`:
+
+```jsx
+import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import { getCssText, darkTheme } from "@ace-ex/react";
+
+export default class Document extends NextDocument {
+  render() {
+    return (
+      <Html lang="en" class={darkTheme.className}>
+        <Head>
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+```
+
+Ou se preferir fazer um alternador de tema, por exemplo, utilizando o [next-themes](https://github.com/pacocoursey/next-themes), você deverá envolver sua aplicação com o `themeProvider` passando o `darkTheme`:
+
+```tsx
+// _app.tsx
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "next-themes";
+import { darkTheme } from "@ace-ex/react";
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <ThemeProvider
+      attribute="class"
+      value={{ light: "light-theme", dark: darkTheme.className }}
+      defaultTheme="system"
+    >
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+}
+```
+
 ### Tema
 
 Os tokens padrões do AceEx UI fazem parte do pacote [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens). Consulte a [documentação do tema](/docs/features-theme-tema--page) para saber mais sobre o tema.
@@ -145,3 +205,5 @@ export default function HomePage() {
 ```
 
 Caso queira entender mais sobre a utilização dos tokens, acessa a documentação [Theme Tokens](https://stitches.dev/docs/tokens#using-tokens) do Stiches.
+
+[🔝 Voltar para o topo](#)
