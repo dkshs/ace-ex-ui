@@ -1,4 +1,3 @@
 {
-  "extends": "@ace-ex/eslint-config",
-  "ignorePatterns": [".next", "node_modules", "public"]
+  "extends": "@ace-ex/eslint-config"
 }
