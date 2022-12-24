@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix . && prettier --write ."
   },
   "dependencies": {
-    "@ace-ex/react": "1.0.1",
+    "@ace-ex/react": "1.0.2",
     "@ace-ex/tokens": "1.0.0",
     "@next/font": "13.1.1",
     "next": "13.1.1",

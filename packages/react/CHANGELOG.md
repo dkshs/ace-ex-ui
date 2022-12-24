@@ -1,5 +1,11 @@
 # @ace-ex/react
 
+## 1.0.2
+
+### Patch Changes
+
+- d97655e: Updated `react-spring` dependency to `@react-spring/web`.
+
 ## 1.0.1
 
 ### Patch Changes
