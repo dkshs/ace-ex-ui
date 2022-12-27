@@ -15,8 +15,8 @@ import { Image, Text, Box, Heading } from "@ace-ex/react";
 - **[Adicionando AceEx UI a um aplicativo existente](#adicionando-aceex-ui-a-um-aplicativo-existente)**
 - **[Server-Side Rendering](#server-side-rendering)**
 - **[Fonts](#fonts)**
-- **[Dark e Light](#dark-e-light)**
 - **[Tema](#tema)**
+  - **[Dark e Light](#dark-e-light)**
 
 ## Criando um novo app com AceEx UI
 
@@ -79,9 +79,9 @@ export default class Document extends NextDocument {
 
 > Para mais detalhes veja na documentação do [Stiches](https://stitches.dev/docs/server-side-rendering).
 
-### Fonts
+## Fonts
 
-No [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react) é utilizado duas fontes que vem do pacote [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens): `Inter` e `Open Sans`.
+No [@ace-ex/react](https://www.npmjs.com/package/@ace-ex/react) é utilizado duas fontes que vem do pacote [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens): `Inter` e `Open Sans` com os pesos 400, 500, 600 e 700.
 
 Dentro de `@ace-ex/react` já contem uma função que importa essas fontes. Exemplo com Next:
 
@@ -100,10 +100,11 @@ export default function App({ Component, pageProps }: AppProps) {
 Mas caso queira utilizar a tag `link` na `head` para ser mais rápido, pode utilizar as [fontes do Google](https://fonts.google.com/):
 
 ```html
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
   rel="preconnect"
   href="https://fonts.gstatic.com"
-  crossorigin
+  crossorigin="anonymous"
 />
 <link
   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
@@ -113,13 +114,56 @@ Mas caso queira utilizar a tag `link` na `head` para ser mais rápido, pode util
 
 Para ver as fontes presentes nos token, vá para a página de [fonts](/docs/features-theme-fonts--page) na seção Features/Theme.
 
+## Tema
+
+Os tokens padrões do AceEx UI fazem parte do pacote [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens). Consulte a [documentação do tema](/docs/features-theme-tema--page) para saber mais sobre o tema.
+
+Por padrão o tema já vem tudo configurado, também contento a função `styled()` de estilização `css-in-js` do [Stitches](https://stitches.dev/).
+
+Exemplo de uso:
+
+```tsx
+// MyComponents.tsx
+import { styled } from "@ace-ex/react";
+
+export const MyComponent = styled("button", {
+  bc: "#fff", // `bc` é uma util para backgroundColor
+  color: "#000",
+});
+
+export const MyOtherComponent = styled("div", {
+  bc: "$gray800", // a função pode acessar o tema atráves do `$`
+  color: "$primary",
+});
+```
+
+Ou pode utilizar a proprieda `css` nos componentes:
+
+```tsx
+// HomePage.tsx
+import { Box, Heading } from "@ace-ex/react";
+
+export default function HomePage() {
+  return (
+    <Box css={{ display: "flex", justifyContent: "center" }}>
+      <Heading css={{ color: "$blue600" }} size="xl">
+        Hello World
+      </Heading>
+    </Box>
+  );
+}
+```
+
+Caso queira entender mais sobre a utilização dos tokens, acessa a documentação [Theme Tokens](https://stitches.dev/docs/tokens#using-tokens) do Stiches.
+
 ### Dark e Light
 
-O tema é composto por dois temas, `light` e `dark`. Para alterar entre um e outro você pode colocar na tag `html` o atributo `class`, dessa forma, `class="dark-theme"`. Fazendo isso a aplicação ficará com o tema `dark`, caso tire esse atributo ele voltará para o tema `light`.
+O tema é composto por dois temas, `light` e `dark`. Para alterar entre um e outro você pode colocar na tag `html` o atributo `class`, dessa forma: `class="dark-theme"`. Fazendo isso a aplicação ficará com o tema `dark`, caso tire esse atributo ele voltará para o tema `light`.
 
 Caso queira utilizar somente um tema, `dark` por exemplo, você pode colocar o atributo `class` na tag `html`. Se tiver utilizando `Next.Js`, você pode colocar no arquivo `_document.tsx`:
 
-```jsx
+```tsx
+// _document.tsx
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 import { getCssText, darkTheme } from "@ace-ex/react";
 
@@ -164,46 +208,6 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 ```
 
-### Tema
-
-Os tokens padrões do AceEx UI fazem parte do pacote [@ace-ex/tokens](https://www.npmjs.com/package/@ace-ex/tokens). Consulte a [documentação do tema](/docs/features-theme-tema--page) para saber mais sobre o tema.
-
-Por padrão o tema já vem tudo configurado, também contento a função `styled()` de estilização `css-in-js` do [Stitches](https://stitches.dev/).
-
-Exemplo de uso:
-
-```tsx
-// MyComponents.tsx
-import { styled } from "@ace-ex/react";
-
-export const MyComponent = styled("button", {
-  bc: "#fff", // `bc` é uma util para backgroundColor
-  color: "#000",
-});
-
-export const MyOtherComponent = styled("div", {
-  bc: "$gray800", // a função pode acessar o tema atráves do `$`
-  color: "$primary",
-});
-```
-
-Ou pode utilizar a proprieda `css` nos componentes:
-
-```tsx
-// HomePage.tsx
-import { Box, Heading } from "@ace-ex/react";
-
-export default function HomePage() {
-  return (
-    <Box css={{ display: "flex", justifyContent: "center" }}>
-      <Heading css={{ color: "$blue600" }} size="xl">
-        Hello World
-      </Heading>
-    </Box>
-  );
-}
-```
-
-Caso queira entender mais sobre a utilização dos tokens, acessa a documentação [Theme Tokens](https://stitches.dev/docs/tokens#using-tokens) do Stiches.
+Para ver as cores padrões e dos temas light e dark, acesse [Features/Theme/Colors](/docs/features-theme-colors--page).
 
 [🔝 Voltar para o topo](#)
