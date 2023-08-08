@@ -294,11 +294,14 @@ export interface FileInputProps extends ComponentProps<typeof Input> {
   size?: LabelProps["size"];
   fullWidth?: LabelProps["fullWidth"];
   rounded?: LabelProps["rounded"];
-  content?: ReactNode;
+  inputContent?: ReactNode;
 }
 
 export const FileInput = forwardRef<ElementRef<typeof Input>, FileInputProps>(
-  ({ variant, size, value, content, fullWidth, rounded, ...props }, ref) => {
+  (
+    { variant, size, value, inputContent, fullWidth, rounded, ...props },
+    ref,
+  ) => {
     const createRipple = (
       event: MouseEvent<HTMLLabelElement, globalThis.MouseEvent>,
     ) => {
@@ -345,7 +348,7 @@ export const FileInput = forwardRef<ElementRef<typeof Input>, FileInputProps>(
         rounded={rounded}
         onMouseDown={createRipple}
       >
-        {content}
+        {inputContent}
         <Input ref={ref} {...props} type="file" />
       </Label>
     );

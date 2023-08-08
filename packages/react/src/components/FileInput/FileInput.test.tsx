@@ -4,7 +4,7 @@ import { FileInput } from "./FileInput";
 
 describe("FileInput component", () => {
   it("should render the FileInput", () => {
-    render(<FileInput content="Escolha um arquivo" />);
+    render(<FileInput inputContent="Escolha um arquivo" />);
 
     const label = screen.getByText(/Escolha um arquivo/i);
     expect(label).toBeInTheDocument();
