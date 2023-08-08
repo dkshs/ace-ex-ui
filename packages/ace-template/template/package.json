@@ -10,16 +10,16 @@
     "lint:fix": "eslint --fix . && prettier --write ."
   },
   "dependencies": {
-    "@ace-ex/react": "1.0.2",
-    "@ace-ex/tokens": "1.0.0",
+    "@ace-ex/react": "1.1.0",
+    "@ace-ex/tokens": "1.1.0",
     "@next/font": "13.4.13",
     "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@ace-ex/eslint-config": "1.1.0",
-    "@types/node": "20.4.8",
+    "@ace-ex/eslint-config": "1.2.0",
+    "@types/node": "20.4.9",
     "@types/react": "18.2.19",
     "@types/react-dom": "18.2.7",
     "eslint": "8.46.0",
