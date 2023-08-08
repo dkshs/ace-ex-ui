@@ -1,5 +1,16 @@
 # @ace-ex/react
 
+## 1.1.0
+
+### Minor Changes
+
+- eb6e3b5: Updated dependencies.
+
+### Patch Changes
+
+- Updated dependencies [eb6e3b5]
+  - @ace-ex/tokens@1.1.0
+
 ## 1.0.2
 
 ### Patch Changes

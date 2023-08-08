@@ -1,5 +1,11 @@
 # @ace-ex/eslint-config
 
+## 1.2.0
+
+### Minor Changes
+
+- eb6e3b5: Updated dependencies.
+
 ## 1.1.0
 
 ### Minor Changes

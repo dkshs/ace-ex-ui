@@ -1,6 +1,6 @@
 {
   "name": "@ace-ex/eslint-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Configurações de Eslint.",
   "license": "MIT",
   "main": "index.js",
