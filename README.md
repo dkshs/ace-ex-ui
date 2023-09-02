@@ -5,7 +5,7 @@
 <br />
 <div align="center">
 
-[![License](https://img.shields.io/github/license/ShadowsS01/ace-ex-ui?color=blue)](./LICENSE)
+[![License](https://img.shields.io/github/license/dkshs/ace-ex-ui?color=blue)](./LICENSE)
 
 </div>
 

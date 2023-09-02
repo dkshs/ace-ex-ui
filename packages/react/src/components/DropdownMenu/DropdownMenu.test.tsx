@@ -16,7 +16,7 @@ describe("DropdownMenu component", () => {
         triggerOptions={{ isUserMenu: true }}
         userInfo={{
           username: "User",
-          userImg: "https://github.com/ShadowsS01.png",
+          userImg: "https://github.com/dkshs.png",
         }}
       />,
     );

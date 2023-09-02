@@ -99,8 +99,8 @@ export const HeaderWithUserLogged: StoryObj<HeaderCompleteProps> = {
   args: {
     userIsLogged: true,
     userInfo: {
-      userImg: "https://github.com/ShadowsS01.png",
-      username: "ShadowsS01",
+      userImg: "https://github.com/dkshs.png",
+      username: "dkshs",
     },
     navLinks: [
       {

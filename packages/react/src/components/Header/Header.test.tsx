@@ -69,7 +69,7 @@ describe("Header component", () => {
     render(
       <Header.Complete
         userInfo={{
-          userImg: "https://github.com/ShadowsS01.png",
+          userImg: "https://github.com/dkshs.png",
           username: "User",
         }}
         userIsLogged

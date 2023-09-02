@@ -1,6 +1,6 @@
 {
   "name": "@ace-ex/eslint-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Configurações de Eslint.",
   "license": "MIT",
   "main": "index.js",
@@ -12,12 +12,12 @@
   "repository": {
     "type": "git",
     "directory": "packages/eslint-config",
-    "url": "git+https://github.com/ShadowsS01/ace-ex-ui.git"
+    "url": "git+https://github.com/dkshs/ace-ex-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/ShadowsS01/ace-ex-ui/issues"
+    "url": "https://github.com/dkshs/ace-ex-ui/issues"
   },
-  "homepage": "https://github.com/ShadowsS01/ace-ex-ui/tree/main/packages/eslint-config/README.md",
+  "homepage": "https://github.com/dkshs/ace-ex-ui/tree/main/packages/eslint-config/README.md",
   "scripts": {
     "clean": "rm -rf node_modules"
   },

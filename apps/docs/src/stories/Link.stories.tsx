@@ -88,7 +88,7 @@ export default {
     children: "Link to",
     variant: "blue",
     size: "md",
-    href: "https://github.com/ShadowsS01/",
+    href: "https://github.com/dkshs/",
     target: "_blank",
   },
 } as Meta<LinkProps>;

@@ -58,7 +58,7 @@ export const Primary: StoryObj<DropdownMenuProps> = {};
 export const UserMenu: StoryObj<DropdownMenuProps> = {
   args: {
     userInfo: {
-      userImg: "https://github.com/ShadowsS01.png",
+      userImg: "https://github.com/dkshs.png",
       username: "User",
     },
     triggerOptions: { isUserMenu: true, rounded: "md", size: "lg" },
@@ -74,7 +74,7 @@ export const UserMenu: StoryObj<DropdownMenuProps> = {
               size: "sm",
             }}
             userInfo={{
-              userImg: "https://github.com/ShadowsS01.png",
+              userImg: "https://github.com/dkshs.png",
               username: "User",
             }}
           >
@@ -89,7 +89,7 @@ export const UserMenu: StoryObj<DropdownMenuProps> = {
               size: "md",
             }}
             userInfo={{
-              userImg: "https://github.com/ShadowsS01.png",
+              userImg: "https://github.com/dkshs.png",
               username: "User",
             }}
           >
@@ -105,7 +105,7 @@ export const UserMenu: StoryObj<DropdownMenuProps> = {
               size: "sm",
             }}
             userInfo={{
-              userImg: "https://github.com/ShadowsS01.png",
+              userImg: "https://github.com/dkshs.png",
               username: "User",
             }}
           >
@@ -120,7 +120,7 @@ export const UserMenu: StoryObj<DropdownMenuProps> = {
               size: "md",
             }}
             userInfo={{
-              userImg: "https://github.com/ShadowsS01.png",
+              userImg: "https://github.com/dkshs.png",
               username: "User",
             }}
           >
@@ -135,7 +135,7 @@ export const UserMenu: StoryObj<DropdownMenuProps> = {
               size: "lg",
             }}
             userInfo={{
-              userImg: "https://github.com/ShadowsS01.png",
+              userImg: "https://github.com/dkshs.png",
               username: "User",
             }}
           >

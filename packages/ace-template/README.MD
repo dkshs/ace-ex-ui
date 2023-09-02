@@ -4,7 +4,7 @@
 
 Um modelo de [create-next-app template](https://nextjs.org/docs/api-reference/create-next-app) para apps TypeScript Next.js com o front-end do AceEx UI.
 
-[![Version](https://img.shields.io/npm/v/@ace-ex/react)](https://www.npmjs.com/package/@ace-ex/react) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ShadowsS01/ace-ex-ui/blob/main/packages/ace-template/LICENSE)
+[![Version](https://img.shields.io/npm/v/@ace-ex/react)](https://www.npmjs.com/package/@ace-ex/react) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/dkshs/ace-ex-ui/blob/main/packages/ace-template/LICENSE)
 
 </div>
 
@@ -19,19 +19,19 @@ Um modelo de [create-next-app template](https://nextjs.org/docs/api-reference/cr
 3. Rode:
 
 ```bash
-npx create-next-app@latest -e https://github.com/ShadowsS01/ace-ex-ui/tree/main/packages/ace-template/template my-app
+npx create-next-app@latest -e https://github.com/dkshs/ace-ex-ui/tree/main/packages/ace-template/template my-app
 ```
 
 Ou com Yarn:
 
 ```bash
-yarn create next-app -e https://github.com/ShadowsS01/ace-ex-ui/tree/main/packages/ace-template/template my-app
+yarn create next-app -e https://github.com/dkshs/ace-ex-ui/tree/main/packages/ace-template/template my-app
 ```
 
 Ou com pnpm:
 
 ```bash
-pnpm create next-app -e https://github.com/ShadowsS01/ace-ex-ui/tree/main/packages/ace-template/template my-app
+pnpm create next-app -e https://github.com/dkshs/ace-ex-ui/tree/main/packages/ace-template/template my-app
 ```
 
 O `my-app` é o nome do seu projeto.

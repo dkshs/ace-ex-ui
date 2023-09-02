@@ -1,5 +1,13 @@
 # @ace-ex/react
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated github username in docs and tests.
+- Updated dependencies
+  - @ace-ex/tokens@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes

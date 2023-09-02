@@ -4,7 +4,7 @@
 
 Configurações do TypeScript.
 
-[![Version](https://img.shields.io/npm/v/@ace-ex/ts-config)](https://www.npmjs.com/package/@ace-ex/ts-config) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ShadowsS01/ace-ex-ui/blob/main/packages/ts-config/LICENSE)
+[![Version](https://img.shields.io/npm/v/@ace-ex/ts-config)](https://www.npmjs.com/package/@ace-ex/ts-config) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/dkshs/ace-ex-ui/blob/main/packages/ts-config/LICENSE)
 
 </div>
 
@@ -27,7 +27,7 @@ npm i -D @ace-ex/ts-config
 
 Para utilizar você precisa extender o `@ace-ex/ts-config` no seu `tsconfig.json`. Temos três opções de tsconfig:
 
-**[base](https://github.com/ShadowsS01/ace-ex-ui/blob/main/packages/ts-config/base.json):**
+**[base](https://github.com/dkshs/ace-ex-ui/blob/main/packages/ts-config/base.json):**
 
 ```json
 {
@@ -35,7 +35,7 @@ Para utilizar você precisa extender o `@ace-ex/ts-config` no seu `tsconfig.json
 }
 ```
 
-**[node16](https://github.com/ShadowsS01/ace-ex-ui/blob/main/packages/ts-config/node16.json):**
+**[node16](https://github.com/dkshs/ace-ex-ui/blob/main/packages/ts-config/node16.json):**
 
 ```json
 {
@@ -43,7 +43,7 @@ Para utilizar você precisa extender o `@ace-ex/ts-config` no seu `tsconfig.json
 }
 ```
 
-**[react](https://github.com/ShadowsS01/ace-ex-ui/blob/main/packages/ts-config/react.json):**
+**[react](https://github.com/dkshs/ace-ex-ui/blob/main/packages/ts-config/react.json):**
 
 ```json
 {

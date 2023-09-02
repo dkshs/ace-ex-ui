@@ -7,7 +7,7 @@ export const themes = {
 
     // Brand assets
     brandTitle: "AceEx UI",
-    brandUrl: "https://github.com/ShadowsS01/ace-ex-ui/",
+    brandUrl: "https://github.com/dkshs/ace-ex-ui/",
     brandImage: "logo-dark.svg",
 
     // Base colors
@@ -45,7 +45,7 @@ export const themes = {
 
     // Brand assets
     brandTitle: "AceEx UI",
-    brandUrl: "https://github.com/ShadowsS01/ace-ex-ui/",
+    brandUrl: "https://github.com/dkshs/ace-ex-ui/",
     brandImage: "logo-light.svg",
 
     // Base colors

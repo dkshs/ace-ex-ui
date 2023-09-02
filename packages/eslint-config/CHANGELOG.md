@@ -1,5 +1,11 @@
 # @ace-ex/eslint-config
 
+## 1.2.1
+
+### Patch Changes
+
+- Updated github username in docs and tests.
+
 ## 1.2.0
 
 ### Minor Changes

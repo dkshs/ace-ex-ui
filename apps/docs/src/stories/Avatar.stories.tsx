@@ -50,8 +50,8 @@ export default {
   },
   args: {
     size: "md",
-    src: "https://github.com/ShadowsS01.png",
-    alt: "Foto de perfil de ShadowsS01.",
+    src: "https://github.com/dkshs.png",
+    alt: "Foto de perfil de dkshs.",
   },
 } as Meta<AvatarProps>;
 

@@ -4,7 +4,7 @@
 
 Uma biblioteca de componentes React.
 
-[![Version](https://img.shields.io/npm/v/@ace-ex/react)](https://www.npmjs.com/package/@ace-ex/react) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ShadowsS01/ace-ex-ui/blob/main/packages/react/LICENSE)
+[![Version](https://img.shields.io/npm/v/@ace-ex/react)](https://www.npmjs.com/package/@ace-ex/react) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/dkshs/ace-ex-ui/blob/main/packages/react/LICENSE)
 
 </div>
 

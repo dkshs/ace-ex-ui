@@ -4,7 +4,7 @@
 
 Visuais primitivos, como tipografia, cor e espaçamento, que são compartilhados entre plataformas, baseado na [System UI Theme Specification](https://github.com/system-ui/theme-specification) do Brent Jackson.
 
-[![Version](https://img.shields.io/npm/v/@ace-ex/tokens)](https://www.npmjs.com/package/@ace-ex/tokens) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/ShadowsS01/ace-ex-ui/blob/main/packages/tokens/LICENSE)
+[![Version](https://img.shields.io/npm/v/@ace-ex/tokens)](https://www.npmjs.com/package/@ace-ex/tokens) [![License](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/dkshs/ace-ex-ui/blob/main/packages/tokens/LICENSE)
 
 </div>
 

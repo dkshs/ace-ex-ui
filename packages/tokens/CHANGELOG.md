@@ -1,5 +1,11 @@
 # @ace-ex/tokens
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated github username in docs and tests.
+
 ## 1.1.0
 
 ### Minor Changes

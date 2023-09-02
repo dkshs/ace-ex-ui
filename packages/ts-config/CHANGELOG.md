@@ -1,5 +1,11 @@
 # @ace-ex/ts-config
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated github username in docs and tests.
+
 ## 1.0.0
 
 ### Major Changes

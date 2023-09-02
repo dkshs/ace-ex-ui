@@ -11,9 +11,9 @@ describe("Image component", () => {
   });
 
   it("should render a image with src attribute", () => {
-    render(<Image alt="test" src="https://github.com/ShadowsS01.png" />);
+    render(<Image alt="test" src="https://github.com/dkshs.png" />);
 
     const imageSrc = screen.getByRole("img").getAttribute("src");
-    expect(imageSrc).toBe("https://github.com/ShadowsS01.png");
+    expect(imageSrc).toBe("https://github.com/dkshs.png");
   });
 });
